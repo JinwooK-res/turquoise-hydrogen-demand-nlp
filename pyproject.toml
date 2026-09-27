@@ -8,6 +8,7 @@ version = "0.1.0"
 description = "NLP and survey analysis for turquoise-hydrogen byproduct carbon-black demand research."
 requires-python = ">=3.10"
 dependencies = [
+    "matplotlib>=3.8",
     "pandas>=2.0",
     "scikit-learn>=1.3",
 ]

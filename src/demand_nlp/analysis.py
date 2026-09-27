@@ -51,6 +51,16 @@ def fit_topics(texts: pd.Series, n_topics: int = 3, n_terms: int = 8) -> pd.Data
     return pd.DataFrame(rows)
 
 
+def tfidf_top_terms(texts: pd.Series, n_terms: int = 12) -> pd.DataFrame:
+    """Return the highest mean TF-IDF terms using the project vectorizer."""
+    vectorizer = TfidfVectorizer(lowercase=True, token_pattern=r"(?u)\b\w+\b")
+    matrix = vectorizer.fit_transform(texts.fillna("").astype(str))
+    scores = matrix.mean(axis=0).A1
+    terms = vectorizer.get_feature_names_out()
+    order = scores.argsort()[-n_terms:][::-1]
+    return pd.DataFrame({"term": terms[order], "score": scores[order]})
+
+
 def map_taxonomy(frame: pd.DataFrame, taxonomy: pd.DataFrame) -> pd.DataFrame:
     """Map application areas to public taxonomy labels."""
     mapping = taxonomy.set_index("application_area")["taxonomy_group"]

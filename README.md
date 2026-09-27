@@ -23,7 +23,7 @@ The analysis pipeline combines structured survey summaries with exploratory text
 5. Identify exploratory text topics using non-negative matrix factorization (NMF)
 6. Map responses to a predefined, human-interpretable demand taxonomy
 7. Integrate structured survey variables and text-derived information
-8. Produce summary tables and visualization-ready outputs
+8. Produce summary tables and public-facing visualizations
 
 The project intentionally separates:
 
@@ -51,6 +51,7 @@ The pipeline uses:
 - Python
 - pandas
 - scikit-learn
+- matplotlib
 - TF-IDF vectorization
 - NMF topic modeling
 - rule-based taxonomy mapping
@@ -58,6 +59,40 @@ The pipeline uses:
 - multi-response parsing
 
 Topic modeling is exploratory and is not used for statistical inference or market prediction.
+
+## Example Results
+
+> All figures below are generated from the fully synthetic demonstration dataset. They demonstrate the analytical workflow and should not be interpreted as actual market findings or evidence.
+
+### Industry Adoption Patterns
+
+![Industry adoption heatmap](figures/industry_adoption_heatmap.png)
+
+This heatmap shows within-industry proportions across synthetic adoption-interest categories.
+
+### Demand Taxonomy by Industry
+
+![Industry taxonomy heatmap](figures/industry_taxonomy_heatmap.png)
+
+This heatmap demonstrates how the human-defined demand taxonomy is distributed across synthetic industry groups.
+
+### TF-IDF Terms
+
+![Top TF-IDF terms](figures/tfidf_top_terms.png)
+
+These bars show the highest overall TF-IDF terms found in the synthetic free-text comments.
+
+### NMF Topic Keywords
+
+![NMF topic keywords](figures/nmf_topic_keywords.png)
+
+These panels show the highest-weighted terms for each exploratory NMF topic without assigning substantive topic names.
+
+### Management Indicators
+
+![Management indicator heatmap](figures/management_indicator_heatmap.png)
+
+This heatmap demonstrates multi-response parsing and grouped comparison of synthetic management indicators by industry.
 
 ## Project Structure
 
@@ -70,18 +105,27 @@ turquoise-hydrogen-demand-nlp/
 │   ├── synthetic_survey.csv
 │   ├── survey_schema.csv
 │   └── demand_taxonomy.csv
+├── figures/
+│   ├── industry_adoption_heatmap.png
+│   ├── industry_taxonomy_heatmap.png
+│   ├── tfidf_top_terms.png
+│   ├── nmf_topic_keywords.png
+│   └── management_indicator_heatmap.png
 ├── scripts/
 │   └── generate_synthetic_data.py
 ├── src/
 │   └── demand_nlp/
 │       ├── __init__.py
 │       ├── analysis.py
-│       └── cli.py
+│       ├── cli.py
+│       └── visualization.py
 └── tests/
     └── test_publication_safety.py
 ```
 
-Generated analysis outputs are written to `outputs/` and are not required as source data.
+The `figures/` directory contains tracked public-facing visual outputs.
+
+Generated intermediate analysis outputs are written to `outputs/`, which remains ignored by Git.
 
 ## Setup
 
@@ -105,6 +149,12 @@ Run the analysis pipeline:
 turquoise-demand-nlp
 ```
 
+Generate all public figures:
+
+```powershell
+python -m demand_nlp.visualization
+```
+
 Run the tests:
 
 ```powershell
@@ -121,7 +171,7 @@ Synthetic data generation uses the fixed random seed:
 
 This allows the public demonstration dataset and downstream analyses to be reproduced consistently.
 
-Regression tests cover deterministic data generation, identifier uniqueness, schema validity, multi-response parsing, TF-IDF output, NMF topic generation, taxonomy validity, and publication-safety constraints.
+Regression tests cover deterministic data generation, identifier uniqueness, schema validity, multi-response parsing, TF-IDF output, NMF topic generation, taxonomy validity, publication-safety constraints, and figure generation.
 
 ## Limitations
 
@@ -132,7 +182,7 @@ In particular:
 - the survey records are entirely synthetic
 - synthetic category frequencies do not reproduce the original survey
 - industry-level patterns are artificial demonstration outputs
-- NMF topics are exploratory and depend on the generated corpus
+- NMF topics are exploratory and depend on the generated corpus and preprocessing
 - taxonomy assignments are based on explicit human-defined rules
 - the workflow does not estimate market size, adoption probability, or commercial viability
 

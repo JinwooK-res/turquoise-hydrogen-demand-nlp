@@ -5,6 +5,7 @@ from pathlib import Path
 import pandas as pd
 
 from demand_nlp.analysis import fit_topics, map_taxonomy, split_multi
+from demand_nlp.visualization import CORE_FIGURES, generate_figures
 from scripts.generate_synthetic_data import generate_records, write_dataset
 
 
@@ -81,3 +82,10 @@ def test_no_personal_or_company_metadata_fields(tmp_path: Path) -> None:
     frame, _ = synthetic_frame(tmp_path)
     assert PROHIBITED_METADATA_FIELDS.isdisjoint(frame.columns)
 
+
+def test_figure_generation_creates_all_nonempty_figures(tmp_path: Path) -> None:
+    synthetic_frame(tmp_path)
+    figure_dir = tmp_path / "figures"
+    paths = generate_figures(tmp_path, figure_dir)
+    assert [path.name for path in paths] == list(CORE_FIGURES)
+    assert all(path.is_file() and path.stat().st_size > 0 for path in paths)
