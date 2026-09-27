@@ -1,0 +1,74 @@
+respondent_id,industry_group,application_area,adoption_interest,standardization_need,management_indicators,urgent_test_methods,commercialization_barriers,free_text_comment
+SYN-0001,coatings,thermal_material,conditional,low,particle_size,purity_test|conductivity_test,price|qualification_time|standards,A consistent supply specification would support adoption.
+SYN-0002,construction,reinforced_polymer,conditional,low,surface_area,dispersion_test,supply_consistency|price|standards,A consistent supply specification would support adoption.
+SYN-0003,environmental,thermal_material,exploring,critical,particle_size,purity_test,supply_consistency,A shared test method could reduce qualification time.
+SYN-0004,environmental,reinforced_polymer,exploring,moderate,dispersion|purity,aging_test,supply_consistency,Need clearer performance data before a pilot.
+SYN-0005,energy_storage,durable_coating,exploring,low,conductivity|particle_size|durability,conductivity_test,supply_consistency,Pilot pricing and durability evidence are important.
+SYN-0006,environmental,adsorbent_media,exploring,low,dispersion|durability|conductivity,conductivity_test|aging_test,supply_consistency|qualification_time|performance_data,A consistent supply specification would support adoption.
+SYN-0007,energy_storage,conductive_compound,conditional,critical,surface_area|purity,dispersion_test|purity_test,price,Pilot pricing and durability evidence are important.
+SYN-0008,construction,thermal_material,conditional,critical,durability|purity,purity_test,supply_consistency|price|standards,A shared test method could reduce qualification time.
+SYN-0009,construction,durable_coating,exploring,high,durability|purity|particle_size,purity_test|dispersion_test,standards|performance_data,Pilot pricing and durability evidence are important.
+SYN-0010,construction,adsorbent_media,conditional,high,dispersion|conductivity,purity_test,performance_data,A shared test method could reduce qualification time.
+SYN-0011,coatings,adsorbent_media,conditional,high,conductivity,scale_up_test,standards,Pilot pricing and durability evidence are important.
+SYN-0012,mobility,adsorbent_media,pilot_ready,moderate,purity|surface_area|particle_size,dispersion_test,price,Need clearer performance data before a pilot.
+SYN-0013,coatings,durable_coating,pilot_ready,high,conductivity|durability|dispersion,conductivity_test,standards|supply_consistency,We would evaluate a sample with a practical scale-up plan.
+SYN-0014,coatings,adsorbent_media,pilot_ready,critical,particle_size|durability,purity_test,standards|performance_data|price,A shared test method could reduce qualification time.
+SYN-0015,coatings,thermal_material,exploring,critical,surface_area|purity,dispersion_test|aging_test,price|performance_data|standards,Need clearer performance data before a pilot.
+SYN-0016,energy_storage,durable_coating,pilot_ready,high,surface_area,aging_test|conductivity_test,performance_data|standards|qualification_time,We would evaluate a sample with a practical scale-up plan.
+SYN-0017,mobility,durable_coating,conditional,high,conductivity,scale_up_test|purity_test,qualification_time|price|performance_data,A consistent supply specification would support adoption.
+SYN-0018,construction,adsorbent_media,exploring,high,purity,scale_up_test,supply_consistency,A consistent supply specification would support adoption.
+SYN-0019,construction,durable_coating,exploring,critical,particle_size|surface_area,conductivity_test|scale_up_test,qualification_time,We would evaluate a sample with a practical scale-up plan.
+SYN-0020,mobility,conductive_compound,conditional,low,conductivity|particle_size,aging_test,performance_data|supply_consistency|standards,A consistent supply specification would support adoption.
+SYN-0021,environmental,thermal_material,pilot_ready,low,purity|conductivity|dispersion,dispersion_test,supply_consistency|performance_data|price,We would evaluate a sample with a practical scale-up plan.
+SYN-0022,mobility,durable_coating,not_planned,high,purity|surface_area,dispersion_test|purity_test,performance_data|qualification_time|standards,A consistent supply specification would support adoption.
+SYN-0023,mobility,reinforced_polymer,pilot_ready,high,dispersion|durability,conductivity_test,price|standards|performance_data,We would evaluate a sample with a practical scale-up plan.
+SYN-0024,mobility,durable_coating,pilot_ready,high,conductivity,aging_test,supply_consistency|qualification_time|performance_data,A shared test method could reduce qualification time.
+SYN-0025,coatings,conductive_compound,pilot_ready,high,purity|surface_area|particle_size,aging_test|purity_test,supply_consistency,Need clearer performance data before a pilot.
+SYN-0026,mobility,durable_coating,conditional,high,particle_size|dispersion|conductivity,dispersion_test,price,A shared test method could reduce qualification time.
+SYN-0027,construction,reinforced_polymer,pilot_ready,low,dispersion|conductivity,purity_test|aging_test,qualification_time|standards,Need clearer performance data before a pilot.
+SYN-0028,construction,reinforced_polymer,not_planned,high,durability,conductivity_test|dispersion_test,qualification_time|supply_consistency|price,Pilot pricing and durability evidence are important.
+SYN-0029,energy_storage,durable_coating,not_planned,high,particle_size|durability|purity,scale_up_test,performance_data|qualification_time,We would evaluate a sample with a practical scale-up plan.
+SYN-0030,coatings,conductive_compound,exploring,low,dispersion|surface_area|conductivity,aging_test,supply_consistency|price|performance_data,A shared test method could reduce qualification time.
+SYN-0031,construction,durable_coating,not_planned,high,durability|dispersion|particle_size,conductivity_test|dispersion_test,supply_consistency|standards|qualification_time,A shared test method could reduce qualification time.
+SYN-0032,energy_storage,durable_coating,conditional,low,particle_size|surface_area,dispersion_test,performance_data|supply_consistency|standards,A shared test method could reduce qualification time.
+SYN-0033,mobility,reinforced_polymer,pilot_ready,critical,dispersion|surface_area,scale_up_test|dispersion_test,performance_data,Need clearer performance data before a pilot.
+SYN-0034,environmental,reinforced_polymer,not_planned,high,conductivity,dispersion_test,price,Need clearer performance data before a pilot.
+SYN-0035,mobility,thermal_material,pilot_ready,critical,conductivity|durability,dispersion_test,price|qualification_time|supply_consistency,Pilot pricing and durability evidence are important.
+SYN-0036,mobility,reinforced_polymer,exploring,high,conductivity|particle_size|surface_area,purity_test|conductivity_test,qualification_time|supply_consistency,We would evaluate a sample with a practical scale-up plan.
+SYN-0037,mobility,durable_coating,conditional,high,purity|conductivity|durability,purity_test|dispersion_test,qualification_time|performance_data|supply_consistency,A consistent supply specification would support adoption.
+SYN-0038,construction,conductive_compound,exploring,high,conductivity|purity,conductivity_test|purity_test,qualification_time|performance_data,We would evaluate a sample with a practical scale-up plan.
+SYN-0039,energy_storage,reinforced_polymer,pilot_ready,high,purity|dispersion|conductivity,purity_test,supply_consistency|qualification_time|price,A shared test method could reduce qualification time.
+SYN-0040,coatings,reinforced_polymer,not_planned,low,conductivity,scale_up_test|purity_test,qualification_time|standards|price,Need clearer performance data before a pilot.
+SYN-0041,coatings,thermal_material,exploring,moderate,surface_area|particle_size|durability,scale_up_test,qualification_time|price,A shared test method could reduce qualification time.
+SYN-0042,energy_storage,durable_coating,conditional,critical,dispersion|surface_area,purity_test,qualification_time,Need clearer performance data before a pilot.
+SYN-0043,mobility,adsorbent_media,conditional,low,durability,scale_up_test|aging_test,price|supply_consistency|qualification_time,Need clearer performance data before a pilot.
+SYN-0044,environmental,adsorbent_media,conditional,high,conductivity|particle_size,scale_up_test,price,We would evaluate a sample with a practical scale-up plan.
+SYN-0045,energy_storage,reinforced_polymer,exploring,high,conductivity|durability,purity_test,qualification_time|supply_consistency|standards,Pilot pricing and durability evidence are important.
+SYN-0046,energy_storage,thermal_material,exploring,critical,dispersion|conductivity,scale_up_test|purity_test,qualification_time|performance_data,Need clearer performance data before a pilot.
+SYN-0047,mobility,thermal_material,exploring,moderate,durability|dispersion,scale_up_test|purity_test,price|supply_consistency,A shared test method could reduce qualification time.
+SYN-0048,mobility,adsorbent_media,conditional,low,conductivity,dispersion_test,price|qualification_time|supply_consistency,A shared test method could reduce qualification time.
+SYN-0049,coatings,adsorbent_media,conditional,low,surface_area|purity|conductivity,conductivity_test,performance_data|supply_consistency|standards,A consistent supply specification would support adoption.
+SYN-0050,environmental,durable_coating,exploring,critical,surface_area,dispersion_test|aging_test,qualification_time|standards|performance_data,A shared test method could reduce qualification time.
+SYN-0051,coatings,durable_coating,conditional,low,dispersion,aging_test|dispersion_test,performance_data|supply_consistency|standards,Need clearer performance data before a pilot.
+SYN-0052,construction,reinforced_polymer,pilot_ready,low,surface_area|particle_size,purity_test|conductivity_test,supply_consistency|price|qualification_time,Need clearer performance data before a pilot.
+SYN-0053,environmental,thermal_material,conditional,low,conductivity|surface_area,aging_test,standards,Pilot pricing and durability evidence are important.
+SYN-0054,mobility,conductive_compound,not_planned,moderate,surface_area|durability,purity_test,qualification_time|standards|performance_data,Need clearer performance data before a pilot.
+SYN-0055,coatings,conductive_compound,conditional,moderate,dispersion|durability|surface_area,scale_up_test,price|qualification_time,A shared test method could reduce qualification time.
+SYN-0056,coatings,conductive_compound,conditional,moderate,surface_area|particle_size|purity,aging_test|dispersion_test,standards|performance_data,Need clearer performance data before a pilot.
+SYN-0057,coatings,durable_coating,not_planned,low,purity|conductivity,dispersion_test,supply_consistency|price,Pilot pricing and durability evidence are important.
+SYN-0058,energy_storage,adsorbent_media,conditional,critical,particle_size|purity|surface_area,aging_test|conductivity_test,standards|price|supply_consistency,Need clearer performance data before a pilot.
+SYN-0059,mobility,adsorbent_media,not_planned,critical,durability|purity|surface_area,aging_test|dispersion_test,price|performance_data|qualification_time,A consistent supply specification would support adoption.
+SYN-0060,mobility,reinforced_polymer,not_planned,moderate,surface_area|conductivity|dispersion,aging_test,standards|supply_consistency,Pilot pricing and durability evidence are important.
+SYN-0061,construction,durable_coating,exploring,low,particle_size,aging_test|purity_test,standards,Need clearer performance data before a pilot.
+SYN-0062,coatings,conductive_compound,exploring,critical,durability|conductivity,conductivity_test,performance_data,Need clearer performance data before a pilot.
+SYN-0063,environmental,durable_coating,conditional,moderate,surface_area,aging_test|scale_up_test,performance_data,A shared test method could reduce qualification time.
+SYN-0064,construction,conductive_compound,exploring,moderate,particle_size|purity,conductivity_test,performance_data|standards,A consistent supply specification would support adoption.
+SYN-0065,energy_storage,reinforced_polymer,not_planned,high,conductivity,dispersion_test,qualification_time|price,Pilot pricing and durability evidence are important.
+SYN-0066,environmental,adsorbent_media,conditional,low,conductivity|durability,scale_up_test|aging_test,standards|performance_data|qualification_time,Need clearer performance data before a pilot.
+SYN-0067,energy_storage,durable_coating,conditional,high,surface_area,dispersion_test,standards|qualification_time,We would evaluate a sample with a practical scale-up plan.
+SYN-0068,construction,durable_coating,exploring,high,surface_area|particle_size,aging_test,supply_consistency|price,Need clearer performance data before a pilot.
+SYN-0069,construction,reinforced_polymer,not_planned,critical,durability,aging_test,standards,Need clearer performance data before a pilot.
+SYN-0070,construction,durable_coating,pilot_ready,low,surface_area|durability,purity_test,supply_consistency,Need clearer performance data before a pilot.
+SYN-0071,construction,reinforced_polymer,not_planned,moderate,surface_area|dispersion|purity,aging_test|conductivity_test,standards|qualification_time,We would evaluate a sample with a practical scale-up plan.
+SYN-0072,mobility,adsorbent_media,exploring,low,particle_size,scale_up_test|conductivity_test,qualification_time,Pilot pricing and durability evidence are important.
+SYN-0073,energy_storage,thermal_material,exploring,moderate,purity|particle_size|dispersion,dispersion_test,standards,Need clearer performance data before a pilot.

@@ -1,0 +1,10 @@
+field,type,description
+respondent_id,string,Synthetic stable identifier
+industry_group,categorical,Synthetic industry segment
+application_area,categorical,Synthetic application category
+adoption_interest,categorical,Synthetic adoption stage
+standardization_need,ordinal,Synthetic need level
+management_indicators,multi-response,Pipe-separated synthetic indicators
+urgent_test_methods,multi-response,Pipe-separated synthetic tests
+commercialization_barriers,multi-response,Pipe-separated synthetic barriers
+free_text_comment,text,Synthetic templated comment
