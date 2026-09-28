@@ -1,4 +1,4 @@
-"""Generate the tracked, publication-facing figures from synthetic data."""
+"""Generate figures from the synthetic survey data."""
 
 from __future__ import annotations
 
@@ -102,7 +102,7 @@ def plot_management_indicators(frame: pd.DataFrame, output_dir: Path) -> None:
 
 
 def generate_figures(data_dir: Path = Path("data"), output_dir: Path = Path("figures")) -> list[Path]:
-    """Generate all five tracked figures from the public synthetic inputs."""
+    """Generate the five figures used by the project."""
     frame = load_survey(data_dir / "synthetic_survey.csv")
     taxonomy = load_survey(data_dir / "demand_taxonomy.csv")
     plot_industry_adoption(frame, output_dir)

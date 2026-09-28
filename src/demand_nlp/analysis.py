@@ -1,4 +1,4 @@
-"""Synthetic survey processing and transparent NLP analysis utilities."""
+"""Utilities for processing synthetic carbon black demand survey data."""
 
 from __future__ import annotations
 
@@ -113,7 +113,7 @@ def extract_terms(texts: pd.Series) -> Counter[str]:
 
 
 def write_outputs(frame: pd.DataFrame, taxonomy: pd.DataFrame, output_dir: Path) -> None:
-    """Run the complete public analysis and write synthetic-derived outputs."""
+    """Write analysis summaries derived from the survey data."""
     output_dir.mkdir(parents=True, exist_ok=True)
     grouped_summary(frame, "industry_group", "adoption_interest").to_csv(output_dir / "industry_adoption_summary.csv", index=False)
     multi_response_summary(frame, "management_indicators").to_csv(output_dir / "management_indicator_summary.csv", index=False)

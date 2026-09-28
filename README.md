@@ -1,103 +1,47 @@
-# Turquoise Hydrogen Demand NLP
+# Carbon Black Demand NLP
 
-A reproducible NLP workflow for structuring industrial demand and standardization needs related to turquoise-hydrogen-derived carbon materials.
+Python-based text analysis of carbon black demand and application data in the context of turquoise hydrogen production. The repository uses a synthetic survey to summarize industrial applications, adoption interest, standardization needs, and free-text comments.
 
-This public repository uses a fully synthetic survey dataset generated from scratch with a fixed random seed. It demonstrates how structured survey items and free-text responses can be combined to identify interpretable demand themes across industrial application groups.
+## Overview
 
-> **Synthetic data notice**
->
-> All survey records in this repository are fully synthetic. No actual company names, respondent information, contact details, original survey responses, source documents, or real response distributions are included. Results should not be interpreted as estimates of the actual turquoise-hydrogen or carbon-material market.
+- 73 synthetic survey records covering five industry groups and five application areas
+- Structured response summaries by industry and adoption interest
+- Multi-response counts for management indicators
+- Word-frequency and TF-IDF summaries of free-text comments
+- Exploratory NMF topic terms
+- Rule-based mapping of application areas to a small demand taxonomy
+- CSV summaries and five PNG figures
 
-## Research Question
+## Analysis
 
-**Can structured survey items and free-text industrial demand responses be transformed into reproducible, interpretable demand categories using lightweight NLP?**
+The code reads the files in `data/`, parses pipe-separated response fields, groups categorical responses, counts text tokens, calculates TF-IDF scores, fits a three-topic NMF model, and creates heatmaps and bar charts. The taxonomy is defined in `data/demand_taxonomy.csv`; it is not learned from the text.
 
-## Workflow
+NMF topics and text scores are descriptive outputs from the synthetic comments. They are not market estimates, forecasts, or validation of demand.
 
-The analysis pipeline combines structured survey summaries with exploratory text analysis:
+## Outputs
 
-1. Generate a deterministic synthetic survey dataset
-2. Parse structured and multi-response survey fields
-3. Compare industrial application groups
-4. Extract important terms using TF-IDF
-5. Identify exploratory text topics using non-negative matrix factorization (NMF)
-6. Map responses to a predefined, human-interpretable demand taxonomy
-7. Integrate structured survey variables and text-derived information
-8. Produce summary tables and public-facing visualizations
+Running the analysis creates these files in `outputs/`:
 
-The project intentionally separates:
+- `industry_adoption_summary.csv`
+- `management_indicator_summary.csv`
+- `taxonomy_summary.csv`
+- `industry_comparison.csv`
+- `term_frequency.csv`
+- `nmf_topic_terms.csv`
+- `industry_adoption_heatmap.svg`
 
-- **Unsupervised topic modeling** — exploratory patterns learned from synthetic free-text responses
-- **Demand taxonomy mapping** — predefined, transparent categories designed for interpretability
+Running the visualization module creates these tracked figures in `figures/`:
 
-The two should not be interpreted as equivalent.
+- `industry_adoption_heatmap.png`
+- `industry_taxonomy_heatmap.png`
+- `tfidf_top_terms.png`
+- `nmf_topic_keywords.png`
+- `management_indicator_heatmap.png`
 
-## Demand Taxonomy
-
-The public demonstration organizes demand into broad categories such as:
-
-- Material Properties
-- Application Performance
-- Testing & Standardization
-- Commercialization
-- Knowledge & Adoption
-
-The taxonomy is human-defined and intended to demonstrate transparent structuring of qualitative industrial information rather than automatic ground-truth classification.
-
-## Methods
-
-The pipeline uses:
-
-- Python
-- pandas
-- scikit-learn
-- matplotlib
-- TF-IDF vectorization
-- NMF topic modeling
-- rule-based taxonomy mapping
-- grouped industry-level summaries
-- multi-response parsing
-
-Topic modeling is exploratory and is not used for statistical inference or market prediction.
-
-## Example Results
-
-> All figures below are generated from the fully synthetic demonstration dataset. They demonstrate the analytical workflow and should not be interpreted as actual market findings or evidence.
-
-### Industry Adoption Patterns
-
-![Industry adoption heatmap](figures/industry_adoption_heatmap.png)
-
-This heatmap shows within-industry proportions across synthetic adoption-interest categories.
-
-### Demand Taxonomy by Industry
-
-![Industry taxonomy heatmap](figures/industry_taxonomy_heatmap.png)
-
-This heatmap demonstrates how the human-defined demand taxonomy is distributed across synthetic industry groups.
-
-### TF-IDF Terms
-
-![Top TF-IDF terms](figures/tfidf_top_terms.png)
-
-These bars show the highest overall TF-IDF terms found in the synthetic free-text comments.
-
-### NMF Topic Keywords
-
-![NMF topic keywords](figures/nmf_topic_keywords.png)
-
-These panels show the highest-weighted terms for each exploratory NMF topic without assigning substantive topic names.
-
-### Management Indicators
-
-![Management indicator heatmap](figures/management_indicator_heatmap.png)
-
-This heatmap demonstrates multi-response parsing and grouped comparison of synthetic management indicators by industry.
-
-## Project Structure
+## Repository Structure
 
 ```text
-turquoise-hydrogen-demand-nlp/
+carbon-black-demand-nlp/
 ├── README.md
 ├── LICENSE
 ├── pyproject.toml
@@ -123,33 +67,30 @@ turquoise-hydrogen-demand-nlp/
     └── test_publication_safety.py
 ```
 
-The `figures/` directory contains tracked public-facing visual outputs.
+## Usage
 
-Generated intermediate analysis outputs are written to `outputs/`, which remains ignored by Git.
-
-## Setup
+Create an environment and install the package:
 
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
-
 python -m pip install -e .
 python -m pip install -e ".[test]"
 ```
 
-Generate the synthetic dataset:
+Regenerate the synthetic data if needed:
 
 ```powershell
 python scripts/generate_synthetic_data.py
 ```
 
-Run the analysis pipeline:
+Run the CSV analysis:
 
 ```powershell
-turquoise-demand-nlp
+carbon-black-demand-nlp
 ```
 
-Generate all public figures:
+Generate the five figures:
 
 ```powershell
 python -m demand_nlp.visualization
@@ -161,38 +102,13 @@ Run the tests:
 pytest
 ```
 
-## Reproducibility
+## Data
 
-Synthetic data generation uses the fixed random seed:
-
-```text
-20260927
-```
-
-This allows the public demonstration dataset and downstream analyses to be reproduced consistently.
-
-Regression tests cover deterministic data generation, identifier uniqueness, schema validity, multi-response parsing, TF-IDF output, NMF topic generation, taxonomy validity, publication-safety constraints, and figure generation.
+The repository contains a deterministic synthetic survey generated with seed `20260927`. It has no actual company names, respondent details, contact information, source documents, or original survey responses. The dataset is included to exercise the analysis code; its category frequencies do not represent the carbon black market.
 
 ## Limitations
 
-This repository is a methodological demonstration rather than an empirical market study.
-
-In particular:
-
-- the survey records are entirely synthetic
-- synthetic category frequencies do not reproduce the original survey
-- industry-level patterns are artificial demonstration outputs
-- NMF topics are exploratory and depend on the generated corpus and preprocessing
-- taxonomy assignments are based on explicit human-defined rules
-- the workflow does not estimate market size, adoption probability, or commercial viability
-
-## Background
-
-The project was inspired by practical work involving industrial standardization-demand surveys for carbon materials associated with turquoise hydrogen.
-
-The public version focuses on the methodological problem:
-
-**how to transform mixed structured and qualitative industrial information into a reproducible and traceable analytical workflow.**
+The records and free-text comments are synthetic and templated. The outputs describe this generated dataset only. The code does not estimate market size, adoption probability, or commercial viability.
 
 ## License
 

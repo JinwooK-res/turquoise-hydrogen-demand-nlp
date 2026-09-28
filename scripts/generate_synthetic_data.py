@@ -1,4 +1,4 @@
-"""Generate publication-safe synthetic survey data with a fixed seed."""
+"""Generate the synthetic survey data used by the project."""
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ COMMENTS = [
 
 
 def generate_records() -> list[dict[str, str]]:
-    """Return the deterministic synthetic respondent records."""
+    """Return the survey records generated from the fixed seed."""
     rng = random.Random(SEED)
     rows = []
     for index in range(1, ROWS + 1):
@@ -48,7 +48,7 @@ def generate_records() -> list[dict[str, str]]:
 
 
 def write_dataset(data_dir: Path = DATA_DIR) -> None:
-    """Write all public synthetic data files to ``data_dir``."""
+    """Write the survey, taxonomy, and schema files to ``data_dir``."""
     data_dir.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(generate_records()).to_csv(data_dir / "synthetic_survey.csv", index=False)
     pd.DataFrame([

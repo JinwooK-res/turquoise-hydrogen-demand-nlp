@@ -1,4 +1,4 @@
-"""Command-line entry point for the synthetic demand NLP analysis."""
+"""Run the carbon black demand survey analysis."""
 
 from __future__ import annotations
 
@@ -26,4 +26,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
